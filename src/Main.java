@@ -38,5 +38,14 @@ public class Main {
         System.out.println(arr.getMax());
         arr.removeMax();
         arr.display();
+
+        HighArray orderArr = new HighArray(maxSize);
+
+        for (int i = 0; i < maxSize; i++) {
+            long l = arr.removeMax();
+            if (l == -1) break;
+            orderArr.insert(l);
+        }
+        orderArr.display();
     }
 }
