@@ -61,6 +61,20 @@ class HighArray {
         return max;
     }
 
+    public long removeMax() {
+        if (nElems == 0) {
+            return -1;
+        }
+        long max = 0;
+        for (int i = 0; i < nElems; i++) {
+            if (a[i] > max) {
+                max = a[i];
+            }
+        }
+        delete(max);
+        return max;
+    }
+
     //-----------------------------------------------------------
     public void display()// Вывод содержимого массива
     {

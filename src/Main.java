@@ -36,5 +36,7 @@ public class Main {
 // Повторный вывод
 
         System.out.println(arr.getMax());
+        arr.removeMax();
+        arr.display();
     }
 }
