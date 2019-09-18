@@ -47,5 +47,25 @@ public class Main {
             orderArr.insert(l);
         }
         orderArr.display();
+
+        System.out.println();
+        System.out.println("==============================================");
+        System.out.println();
+
+        HighArray arr1 = new HighArray(maxSize);
+        arr1.insert(77);
+        arr1.insert(99);
+        arr1.insert(77);
+        arr1.insert(55);
+        arr1.insert(99);
+        arr1.insert(88);
+        arr1.insert(11);
+        arr1.insert(0);
+        arr1.insert(11);
+        arr1.insert(33);
+
+        arr1.display();
+        arr1.noDubs();
+        arr1.display();
     }
 }

@@ -82,6 +82,16 @@ class HighArray {
             System.out.print(a[j] + " "); // Вывод
         System.out.println("");
     }
+
+    public void noDubs() {
+        for (int i = 0; i < nElems - 1; i++) {
+            for (int j = i + 1; j < nElems; j++) {
+                if (a[i] == a[j]) {
+                    delete(a[j]);
+                }
+            }
+        }
+    }
 //-----------------------------------------------------------
 } // Конец класса HighArray
 ////////////////////////////////////////////////////////////////
