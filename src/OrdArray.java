@@ -83,6 +83,33 @@ class OrdArray {
         }
     }
 
+    public static long[] merge(long[] arr1, long[] arr2) {
+        if (arr1.length == 0) return arr2;
+        if (arr2.length == 0) return arr1;
+
+        long[] result = new long[arr1.length + arr2.length];
+        int i = 0;
+        int j = 0;
+
+        while (i < arr1.length && j < arr2.length) {
+            if (arr1[i] < arr2[j]) {
+                result[i + j] = arr1[i++];
+            } else {
+                result[i + j] = arr2[j++];
+            }
+        }
+
+        while (i < arr1.length) {
+            result[i + j] = arr1[i++];
+        }
+
+        while (j < arr2.length) {
+            result[i + j] = arr2[j++];
+        }
+
+        return result;
+    }
+
     //-----------------------------------------------------------
     public void display()// Вывод содержимого массива
     {
