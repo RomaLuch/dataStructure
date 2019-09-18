@@ -48,6 +48,27 @@ class OrdArray {
         nElems++;// Увеличение размера
     }
 
+    public void binaryInsert(long value)// Вставка элемента в массив
+    {
+        int curIn = 0;
+        int lowerBound = 0;
+        int upperBound = nElems - 1;
+
+        while (upperBound != lowerBound) {
+            curIn = (lowerBound + upperBound) / 2;
+            if (value > a[curIn]) {
+                lowerBound = curIn + 1;
+            } else {
+                upperBound = curIn - 1;
+            }
+        }
+
+        for (int k = nElems; k > curIn; k--)// Перемещение последующих элементов
+            a[k] = a[k - 1];
+        a[curIn] = value;// Вставка
+        nElems++;// Увеличение размера
+    }
+
     //-----------------------------------------------------------
     public boolean delete(long value) {
         int j = find(value);
