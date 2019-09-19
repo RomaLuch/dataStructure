@@ -1,3 +1,5 @@
+package chapter2;
+
 class OrdArray {
     private long[] a;    // Ссылка на массив a
     private int nElems;     // Количество элементов данных

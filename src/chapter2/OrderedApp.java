@@ -1,3 +1,5 @@
+package chapter2;
+
 class OrderedApp
 {
     public static void main(String[] args)
