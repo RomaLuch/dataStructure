@@ -18,6 +18,17 @@ class InsertSortApp {
         arr.display(); // Вывод элементов
         arr.insertionSort(); // Сортировка методом вставки
         arr.display();
+
+        ArrayIns arr1;// Ссылка на массив
+        arr1 = new ArrayIns(maxSize); // Создание массива
+        arr1.insert(4);
+        arr1.insert(1);
+        arr1.insert(2);
+        arr1.insert(3);
+        arr1.insert(6);
+        arr1.insert(5);
+
+        System.out.println(arr1.median());
     } // Повторный вывод
 }
 ////////////////////////////////////////////////////////////////

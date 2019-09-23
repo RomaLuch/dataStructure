@@ -45,5 +45,18 @@ class ArrayIns {
             a[in] = temp;// Вставить помеченный элемент
         }
     }
+
+    public float median() {
+        insertionSort();
+        if (nElems % 2 == 0) {
+            long l1 = a[nElems / 2 - 1];
+            long l2 = a[nElems / 2];
+            float l = ((float) l1 + l2) / 2;
+            return l;
+        } else {
+            return a[nElems / 2];
+        }
+    }
 }
+
 //--------------------------------------------------------------
