@@ -1,5 +1,7 @@
 package chapter3;
 
+import java.util.Arrays;
+
 class InsertSortApp {
     public static void main(String[] args) {
         int maxSize = 100;// Размер массива
@@ -29,6 +31,22 @@ class InsertSortApp {
         arr1.insert(5);
 
         System.out.println(arr1.median());
+
+
+        ArrayIns arr2;// Ссылка на массив
+        arr2 = new ArrayIns(maxSize); // Создание массива
+        arr2.insert(1);
+        arr2.insert(1);
+        arr2.insert(2);
+        arr2.insert(1);
+        arr2.insert(5);
+        arr2.insert(5);
+        arr2.insert(0);
+        arr2.insert(0);
+
+        arr2.noDubs();
+
+        arr2.display();
     } // Повторный вывод
 }
 ////////////////////////////////////////////////////////////////
